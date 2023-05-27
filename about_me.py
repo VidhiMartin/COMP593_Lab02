@@ -106,8 +106,8 @@ def add_movie(my_info, title, genre):
     # TODO: Complete function body per Step 6
     # Create dictionary for new movie and add to movie list
     new_movie = {
-        'title': '4 Different Houses',
-        'genre': 'fantasy'
+        'title': 'Grave encounters',
+        'genre': 'horror'
     }
     my_info['movies'].append(new_movie)
     return

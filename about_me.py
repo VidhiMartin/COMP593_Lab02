@@ -44,10 +44,10 @@ def main():
 
     # Step 6: Add another movie to the data structure
     # TODO: Change to a movie you like
-    add_movie(about_me, 'Grave encounters', 'horror')
+    add_movie(about_me, ['Grave encounters'], ['horror'])
 
     # Step 7: Print a comma-separated list of movie genres
-    print_movie_genres(about_me['genres'], end = ', ')
+    print_movie_genres(about_me['genre'], end = ', ')
 
     # Step 8: Print a comma-separated list of movie titles
     print_movie_titles(about_me['titles'], end = ', ')
@@ -90,7 +90,7 @@ def add_pizza_toppings(my_info, toppings):
     my_info['Toppings'].extend(toppings)
     for i, topping_name in enumerate(my_info['Toppings']):
      # Convert all pizza toppings to lowercase
-         my_info['Toppings'][i] = topping_name.lowercase()
+         my_info['Toppings'][i] = topping_name.lower()
     # Sort toppings list alphabetically
     my_info['Toppings'].sort()
     return

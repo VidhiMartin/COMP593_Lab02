@@ -119,10 +119,13 @@ def print_movie_genres(my_info):
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 7
+    for i, movie_genre in enumerate(my_info['movies']):
+        my_info['movies'][i]['genre'] = movie_genre['genre'].lower()
 
-    print(my_info['movies'][0]['genre'], end = ', ')
-    print(my_info['movies'][1]['genre'], end = ', ')
-    print(my_info['movies'][2]['genre'])
+    comma_sep_genres = [genre['genre'] for genre in my_info['movies']]
+    comma_sep_gen = ', '.join(comma_sep_genres)
+    print(f'I like to watch {comma_sep_gen}')
+        
 
 def print_movie_titles(movie_list):
     """Prints a sentence listing all favourite movie titles
@@ -130,12 +133,13 @@ def print_movie_titles(movie_list):
     Args:
         movie_list (list): List of favourite movies
     """
+    for i, movie_title in enumerate(movie_list['movies']):
+        movie_list['movies'][i]['title'] = movie_title['title'].title()
+        
+    comma_sep_titles = [movie['title'] for movie in movie_list['movies']]
+    comma_sep = ', '.join(comma_sep_titles)
+    print(f'Some of my favourite movies are: {comma_sep}')
 
-    # TODO: Complete function body per Step 8
-    print(movie_list[0]['title'], end = ', ')
-    print(movie_list[1]['title'], end = ', ')
-    print(movie_list[2]['title'])
-    
 
 if __name__ == '__main__':
     main()

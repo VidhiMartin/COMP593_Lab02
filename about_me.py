@@ -47,10 +47,10 @@ def main():
     add_movie(about_me, 'Grave encounters', 'horror')
 
     # Step 7: Print a comma-separated list of movie genres
-    print_movie_genres(about_me['genre'])
+    print_movie_genres(about_me)
 
     # Step 8: Print a comma-separated list of movie titles
-    print_movie_titles(about_me['title'])
+    print_movie_titles(about_me['movies'])
 
 def print_student_name_and_id(my_info):
     """Prints sentences containing student name and ID
@@ -119,8 +119,7 @@ def print_movie_genres(my_info):
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 7
-    #for i, movie_genres in enumerate(my_info['genre']):
-    #    my_info['movies'][i]['genre'] = my_info['genre']
+
     print(my_info['movies'][0]['genre'], end = ', ')
     print(my_info['movies'][1]['genre'], end = ', ')
     print(my_info['movies'][2]['genre'])
@@ -131,6 +130,7 @@ def print_movie_titles(movie_list):
     Args:
         movie_list (list): List of favourite movies
     """
+
     # TODO: Complete function body per Step 8
     print(movie_list[0]['title'], end = ', ')
     print(movie_list[1]['title'], end = ', ')

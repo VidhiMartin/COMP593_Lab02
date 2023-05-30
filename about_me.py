@@ -124,7 +124,7 @@ def print_movie_genres(my_info):
 
     comma_sep_genres = [genre['genre'] for genre in my_info['movies']]
     comma_sep_gen = ', '.join(comma_sep_genres)
-    print(f'I like to watch {comma_sep_gen}')
+    print(f'\nI like to watch {comma_sep_gen}')
         
 
 def print_movie_titles(movie_list):
@@ -133,12 +133,13 @@ def print_movie_titles(movie_list):
     Args:
         movie_list (list): List of favourite movies
     """
-    for i, movie_title in enumerate(movie_list['movies']):
-        movie_list['movies'][i]['title'] = movie_title['title'].title()
+    for i, movie_title in enumerate(movie_list):
+        movie_list[i]['title'] = movie_title['title'].title()
         
-    comma_sep_titles = [movie['title'] for movie in movie_list['movies']]
+    comma_sep_titles = [movie['title'] for movie in movie_list]
     comma_sep = ', '.join(comma_sep_titles)
-    print(f'Some of my favourite movies are: {comma_sep}')
+
+    print(f'\nSome of my favourite movies are: {comma_sep}')
 
 
 if __name__ == '__main__':
